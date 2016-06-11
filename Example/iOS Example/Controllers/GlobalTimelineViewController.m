@@ -54,12 +54,14 @@
     
     self.title = NSLocalizedString(@"AFNetworking", nil);
 
+    // 下拉刷新控件
     self.refreshControl = [[UIRefreshControl alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableView.frame.size.width, 100.0f)];
     [self.refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
     [self.tableView.tableHeaderView addSubview:self.refreshControl];
 
     self.tableView.rowHeight = 70.0f;
     
+    // 刷新数据
     [self reload:nil];
 }
 

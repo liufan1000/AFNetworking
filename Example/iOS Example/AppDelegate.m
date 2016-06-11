@@ -32,6 +32,7 @@
     NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
     [NSURLCache setSharedURLCache:URLCache];
     
+    // 设置网络指示器，在状态栏上的小菊花，只要有网络请求，会自动显示菊花
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
     UITableViewController *viewController = [[GlobalTimelineViewController alloc] initWithStyle:UITableViewStylePlain];

@@ -24,6 +24,9 @@
 
 @class User;
 
+/**
+ * cmd + shift + j
+ */
 @interface Post : NSObject
 
 @property (nonatomic, assign) NSUInteger postID;
